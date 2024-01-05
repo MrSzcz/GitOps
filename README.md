@@ -5,7 +5,7 @@
 
 - [x]  [Repozytorium "Source"](https://github.com/MrSzcz/Source_Repo)
 - [x]  [Repozytorium "Config"](https://github.com/MrSzcz/Config_Repo)
-- [x]  [DockerHub z obrazami "WebApp" oraz "zad2gitops](https://hub.docker.com/repositories/mrszcz)
+- [x]  [DockerHub z obrazami "WebApp" oraz "zad2gitops](https://hub.docker.com/u/mrszcz)
 
 ## Krok 0
 
@@ -241,7 +241,7 @@ CMD ["/bin/sh"]
 
 Wykorzystuje on najnowszy obraz Alpine. Instaluje następnie wymagane narzędzia, czyli git, curl oraz kubectl.
 
-Tak utworzony Dockerfile został następnie zbudowany oraz wysłany na platformę [DockerHub](https://hub.docker.com/repository/docker/mrszcz/zad2gitops/general).
+Tak utworzony Dockerfile został następnie zbudowany oraz wysłany na platformę [DockerHub](https://hub.docker.com/r/mrszcz/zad2gitops).
 
 - Zbudowanie:
 ![Build image](./images/BuildZad2gitops.png)
