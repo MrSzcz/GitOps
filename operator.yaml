@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: stepcd
+spec:
+  schedule: "*/2 * * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      backoffLimit: 0
+      template:
+        spec:
+          restartPolicy: Never
+          serviceAccountName: gitops
+          containers:
+            - name: zad2gitops 
+              image: mrszcz/zad2gitops:latest
+              command: [sh, -e, -c]
+              args:
+                - git clone https://github.com/MrSzcz/Config_Repo.git /tmp/config_repo && find /tmp/config_repo -name "*.yaml" -exec kubectl apply -f {} \;
